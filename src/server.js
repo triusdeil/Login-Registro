@@ -32,7 +32,8 @@ app.set('views', path.join(__dirname, 'views'))
 //configurar el motor de plantillas
 app.set('view engine', 'ejs') 
 //middlewares
-
+//ver los mensajes por consola
+app.use(morgan('dev'))
 //routes
 
 //static files
