@@ -26,7 +26,7 @@ const {url} = require('./config/database')
 mongoose.connect(url, {useNewUrlParser: true, useUnifiedTopology: true});
 
 //configurar primero passport 
-require('./config/passport')(passport)
+//require('./config/passport')(passport)
 //dividir el servidor
 //settings
 app.set('port',process.env.PORT || 3000)
@@ -53,7 +53,7 @@ app.use(session({
     saveUninitialized:false
 }))
 //nos permite conectarnos o como nos vamos a autenticar
-app.use(passport.initialize)
+app.use(passport.initialize())
 app.use(passport.session())
 //comunicar entre las paginas html
 app.use(flash())
@@ -63,7 +63,7 @@ app.use(flash())
 //le agregaremos 2 parametros
 //la aplicacion express donde se han venido pasando los middleware y demas
 //tambien le agregaremos passport para poder utilizar autenticacion
-require('./app/routes/routes')(app,passport)
+require('./app/routes/routes')(app, passport)
 
 //static files
 //definir donde estan los archivos css y demas
