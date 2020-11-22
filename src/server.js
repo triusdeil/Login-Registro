@@ -27,6 +27,10 @@ mongoose.connect(url, {useNewUrlParser: true, useUnifiedTopology: true});
 //dividir el servidor
 //settings
 app.set('port',process.env.PORT || 3000)
+//decir al servidor donde estaran todos los archivos de las vistas
+app.set('views', path.join(__dirname, 'views'))
+//configurar el motor de plantillas
+app.set('view engine', 'ejs') 
 //middlewares
 
 //routes
