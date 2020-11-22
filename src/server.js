@@ -56,8 +56,16 @@ app.use(passport.session())
 app.use(flash())
 
 //routes
+//requerir donde estan las rutas
+//le agregaremos 2 parametros
+//la aplicacion express donde se han venido pasando los middleware y demas
+//tambien le agregaremos passport para poder utilizar autenticacion
+require('./app/routes/routes')(app,passport)
 
 //static files
+//definir donde estan los archivos css y demas
+app.use(express.static( path.join(__dirname, 'public')))
+
 app.listen(app.get('port'), () =>{
     console.log('server on port ' + app.get('port'))
 })
