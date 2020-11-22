@@ -34,6 +34,9 @@ app.set('view engine', 'ejs')
 //middlewares
 //ver los mensajes por consola
 app.use(morgan('dev'))
+//convertir cookies de las peticiones para utilizarlas
+app.use(cookieParser())
+
 //routes
 
 //static files
