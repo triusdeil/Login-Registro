@@ -22,6 +22,8 @@ const bodyParser = require('body-parser')
 //requerir la url de la base de datos
 const {url} = require('./config/database')
 
+//conectar la base de datos
+mongoose.connect(url, {useNewUrlParser: true, useUnifiedTopology: true});
 //dividir el servidor
 //settings
 app.set('port',process.env.PORT || 3000)
