@@ -24,6 +24,9 @@ const {url} = require('./config/database')
 
 //conectar la base de datos
 mongoose.connect(url, {useNewUrlParser: true, useUnifiedTopology: true});
+
+//configurar primero passport 
+require('./config/passport')(passport)
 //dividir el servidor
 //settings
 app.set('port',process.env.PORT || 3000)
