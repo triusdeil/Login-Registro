@@ -69,6 +69,7 @@ require('./app/routes/routes')(app,passport)
 //definir donde estan los archivos css y demas
 app.use(express.static( path.join(__dirname, 'public')))
 
+//activando el puerto del servidor
 app.listen(app.get('port'), () =>{
     console.log('server on port ' + app.get('port'))
 })
