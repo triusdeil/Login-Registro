@@ -19,6 +19,8 @@ const cookieParser = require('cookie-parser')
 const bodyParser = require('body-parser')
 
 
+
+
 //dividir el servidor
 //settings
 app.set('port',process.env.PORT || 3000)
