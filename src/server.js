@@ -31,6 +31,7 @@ app.set('port',process.env.PORT || 3000)
 app.set('views', path.join(__dirname, 'views'))
 //configurar el motor de plantillas
 app.set('view engine', 'ejs') 
+
 //middlewares
 //ver los mensajes por consola
 app.use(morgan('dev'))
@@ -39,6 +40,21 @@ app.use(cookieParser())
 //la informacion que reciba de los formularios la voy a poder interpretar a traves de la url
 //extended false: no procesar imagenes solo datos
 app.use(bodyParser.urlencoded({extended: false}))
+//poder manejar las sesiones de express
+//secret variable de entorno
+//resave false para que no se borre cada cierto tiempo
+//
+app.use(session({
+    secret: 'triusdeil',
+    resave: false,
+    saveUninitialized:false
+}))
+//nos permite conectarnos o como nos vamos a autenticar
+app.use(passport.initialize)
+app.use(passport.session())
+//comunicar entre las paginas html
+app.use(flash())
+
 //routes
 
 //static files
