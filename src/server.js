@@ -19,7 +19,8 @@ const cookieParser = require('cookie-parser')
 const bodyParser = require('body-parser')
 
 
-
+//requerir la url de la base de datos
+const {url} = require('./config/database')
 
 //dividir el servidor
 //settings
