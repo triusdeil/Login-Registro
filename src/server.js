@@ -36,7 +36,9 @@ app.set('view engine', 'ejs')
 app.use(morgan('dev'))
 //convertir cookies de las peticiones para utilizarlas
 app.use(cookieParser())
-
+//la informacion que reciba de los formularios la voy a poder interpretar a traves de la url
+//extended false: no procesar imagenes solo datos
+app.use(bodyParser.urlencoded({extended: false}))
 //routes
 
 //static files
