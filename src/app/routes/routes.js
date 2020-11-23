@@ -10,11 +10,13 @@ module.exports = (app,passport) => {
     app.get('/login',(req,res)=>{
         res.render('login',
         {
-            message: req.flash('loginMesaje')
+            message: req.flash('loginMessage')
         })
     })
     app.get('/signup',(req,res)=>{
-        res.render('index')
+        res.render('signup',{
+            message: req.flash('signupMessage')
+        })
     })
 
     app.post('/login',(req,res)=>{
