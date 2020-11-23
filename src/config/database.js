@@ -2,5 +2,5 @@
 
 module.exports = {
     //direccion de la base de datos
-    'url': 'mongodb//localhost/nodelogin'
+    'url': 'mongodb://localhost/nodelogin'
 }
