@@ -16,4 +16,8 @@ module.exports = (app,passport) => {
     app.get('/signup',(req,res)=>{
         res.render('index')
     })
+
+    app.post('/login',(req,res)=>{
+        
+    })
 }
