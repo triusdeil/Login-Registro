@@ -1,9 +1,11 @@
 .login{
-   background: #56ab2f;
+   background: #21cbd1;
    background: -webkit-linear-gradient(to right, #0fa3dd, #1e409e);
    background: linear-gradient(to right, #0fa3dd, #1e409e); 
 }
 
 .signup{
-    
+   background: #dab40d;
+   background: -webkit-linear-gradient(to right, #e42d0d, #e68313);
+   background: linear-gradient(to right, #e42d0d, #e68313); 
 }

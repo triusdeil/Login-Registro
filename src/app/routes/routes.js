@@ -22,4 +22,8 @@ module.exports = (app,passport) => {
     app.post('/login',(req,res)=>{
         
     })
+
+    app.post('/signup',(req,res)=>{
+        
+    })
 }
